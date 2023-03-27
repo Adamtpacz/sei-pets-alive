@@ -1,4 +1,4 @@
-### Planning
+# Planning
 
 ## ERD
 
@@ -11,8 +11,8 @@
 ## Roles
 - Git Owner: Adam Paczkowski
 - Project Manager: Adam Paczkowski
-- Researcher: Nicole
+- Researcher: Nicole Prati
 - Documentation: Adam Paczkowski
 - Frontend: Adriana Castro
-- Backend: Adam, Nicole, Adriana
+- Backend: Adam Paczkowski, Nicole Prati, Adriana Castro
 - Designer: Adriana Castro
