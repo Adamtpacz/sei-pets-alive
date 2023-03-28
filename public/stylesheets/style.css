@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+.login{
+  display: flex;
+  gap: 12px;
+  height: 32px;
+  align-items: center;
+}
+
+.login > img {
+  height: 20px;
+}
