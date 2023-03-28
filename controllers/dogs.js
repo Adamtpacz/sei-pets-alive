@@ -2,7 +2,9 @@ const Dog = require('../models/Dog')
 
 module.exports = {
     index,
-    show
+    show,
+   
+
 }
 
 function index(req, res) {

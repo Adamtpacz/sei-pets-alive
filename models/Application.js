@@ -18,7 +18,8 @@ const applicationSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    message: String
+    message: String,
+
 }, {timestamps: true})
 
 module.exports = mongoose.model('Application', applicationSchema)

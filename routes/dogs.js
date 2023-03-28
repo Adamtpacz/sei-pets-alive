@@ -9,4 +9,5 @@ router.get('/', dogsCtrl.index)
 // GET show route for dogs resource
 router.get('/:id', dogsCtrl.show)
 
+
 module.exports = router

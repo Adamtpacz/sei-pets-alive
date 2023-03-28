@@ -11,9 +11,12 @@ require('./config/database')
 require('./config/passport')
 
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
 var dogsRouter = require('./routes/dogs');
+var applicationsRouter = require('./routes/applications')
+var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index');
+
 
 var app = express();
 
@@ -41,9 +44,13 @@ app.use(function(req,res,next){
   next()
 })
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
+
 app.use('/dogs', dogsRouter);
+app.use('/', applicationsRouter)
+app.use('/users', usersRouter);
+app.use('/', indexRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
