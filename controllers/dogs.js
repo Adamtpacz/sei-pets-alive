@@ -1,7 +1,8 @@
 const Dog = require('../models/Dog')
 
 module.exports = {
-    index
+    index,
+    show
 }
 
 function index(req, res) {
@@ -13,4 +14,15 @@ function index(req, res) {
         console.log(err)
         res.redirect('/')
     })
+}
+
+function show(req,res){
+    Dog.findById(req.params.id)
+        .then(function(dog){
+            res.render('dogs/show', {title:'Dog', dog})
+        })
+        .catch(function (err) {
+            console.log(err)
+            res.redirect('/dogs/')
+        })
 }

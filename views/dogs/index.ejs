@@ -1,6 +1,29 @@
 <%- include('../partials/header', { title }) %>
 <section>
-    <h1>pets here</h1>
+    <h1>all dogs here</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% dogs.forEach(d => { %>
+            <tr>
+                <td><%= d.name %></td>
+                <td><%= d.breed %></td>
+                <td><%= d.age %></td>
+                <td>
+                    <a href="/dogs/<%=d._id%>">View</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
 
 </section>
 
