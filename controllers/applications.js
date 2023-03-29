@@ -25,10 +25,12 @@ function create(req, res) {
                 emailAddress: req.body.emailAddress,
                 numberOfPets: req.body.numberOfPets,
                 address: req.body.address,
-                message: req.body.message
+                message: req.body.message,
+                dog: dog._id
 
 
             }).then(function () {
+                console.log(req.body)
                 res.redirect(`/dogs/${req.params.id}`)
 
             })
