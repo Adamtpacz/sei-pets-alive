@@ -1,6 +1,6 @@
 <%- include('../partials/header', { title }) %>
 
-<form action="" method="POST">
+<form action="/applications/<%= applications._id %>?_method=PUT" method="POST">
     <label>Name:
         <input type="text" name="name" value="">
     </label>
