@@ -28,4 +28,34 @@
 </section>
 <a class="btn-detail" href="/dogs/<%=dog._id%>/applications/new" >Apply to Adopt</a>
 
+<section class="applications">
+    <h2>Applications</h2>
+    <% if (applications.length){ %>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Number of Pets Owned</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%applications.forEach(function(a) { %>
+                <tr>
+                    <td><%= a.name %></td>
+                    <td><%= a.phone %></td>
+                    <td><%= a.emailAddress %></td>
+                    <td><%= a.address %></td>
+                    <td><%= a.numberOfPets %></td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+    <% } else { %>
+        <h5>No Applications Yet</h5>
+        <% } %>
+
+
 <%- include('../partials/footer') %>
