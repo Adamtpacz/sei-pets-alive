@@ -39,13 +39,17 @@ nav {
   grid-template-rows: repeat(2, 300px);
   justify-content: center;
   align-items: center;
+
 }
 .card {
+  background-color: white;
   padding: 20px;
   border: darkgrey 2px solid;
   text-align: center;
   align-items: center;
+  border: 2px solid #d5d9d9;
   border-radius: 10px;
+  box-shadow: rgba(213, 217, 217, .5) 0 5px 8px 0;
 }
 
 .dog-img {
@@ -61,6 +65,27 @@ nav {
   text-align: center;
   padding: 30px;
 }
+
+#view-btn {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 8px 10px;
+  text-align: center;
+  width: 100px;
+}
+
+#view-btn:hover {
+  background-color: #f7fafa;
+}
+
+#view-btn:focus {
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+}
+
 
 @media only screen and (max-width: 480px) {
   body  {
