@@ -14,7 +14,7 @@ const dogSchema = new mongoose.Schema({
     adoptionFee:{type: Number,
     min: 0,
     max: 200},
-    application:[{type:mongoose.Schema.Types.ObjectId, ref: 'Application'}]
+
 
 }, {timestamps: true})
 

@@ -1,6 +1,6 @@
 <%- include('../partials/header', { title }) %>
 
-<form action="" method="POST">
+<form action="/dogs/<%=dog._id%>/applications" method="POST">
     <label>Name:
         <input type="text" name="name">
     </label>
@@ -18,6 +18,11 @@
         <input type="text" name="numberOfPets">
     </label>
     <button type="submit">Submit Application</button>
+    <label>Dog
+    <select name="dog">
+        <option value="<%=dog._id %>">"<%=dog.name %>"</option>
+    </select>
+</label>
 </form>
 
 <%- include('../partials/footer') %>

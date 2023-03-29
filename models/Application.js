@@ -18,7 +18,11 @@ const applicationSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    message: String
+    message: String,
+
+    dog:{type: mongoose.Schema.Types.ObjectId, ref: 'Dog'}
+
+
 }, {timestamps: true})
 
 module.exports = mongoose.model('Application', applicationSchema)
