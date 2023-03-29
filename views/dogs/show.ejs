@@ -52,6 +52,12 @@
                     <td><%= a.emailAddress %></td>
                     <td><%= a.address %></td>
                     <td><%= a.numberOfPets %></td>
+                    <td>
+                    <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
+                        <input type="hidden" value="<%= dog._id %>" name="dog">
+                        <button type="submit">Delete</button>
+                    </form>
+                    </td>
                    <td> <a class="btn-detail" href="/applications/<%=a._id%>/edit" >Edit application</a></td>
                 </tr>
                 <% }); %>

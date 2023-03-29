@@ -5,8 +5,8 @@ module.exports = {
     create,
     new: newApplication,
     edit,
-    updateOne
-
+    updateOne,
+    delete: deleteOne
 }
 
 function newApplication(req, res) {
@@ -33,7 +33,7 @@ function create(req, res) {
 
 
             }).then(function () {
-                console.log(req.body)
+                // console.log(req.body)
                 res.redirect(`/dogs/${req.params.id}`)
 
             })
@@ -49,7 +49,7 @@ function create(req, res) {
         })
 }
 
-function edit(req, res){
+function edit(req, res) {
     Application.findById(req.params.id)
     .then(function(application){
         console.log('this is the application', application)
@@ -67,10 +67,32 @@ function updateOne(req, res){
     }).then(function(application){
     console.log(application)
 
-    res.redirect(`/dogs/${req.params.id}`)
+            res.redirect(`/dogs/${req.params.id}`)
+        })
+        .catch(function (err) {
+            console.log(err)
+            res.redirect(`/dogs/${req.params.id}`)
+        })
+}
+
+function deleteOne(req, res) {
+    // console.log('This is the req:', req.body)
+    
+    Dog.findById(req.body.dog)
+    .then(function(dog) {
+        console.log('This is the dog:', dog)
+        Application.deleteOne({_id: req.params.id})
+        .then(function(results) {
+            console.log('These are the results:', results)
+            res.redirect(`/dogs/${dog._id}`)
+        })
+        .catch(function(err) {
+            console.log(err)
+            res.redirect(`/dogs`)
+        })
     })
-    .catch(function (err) {
+    .catch(function(err) {
         console.log(err)
-        res.redirect(`/dogs/${req.params.id}`)
-})
+        res.redirect('/dogs')
+    })
 }

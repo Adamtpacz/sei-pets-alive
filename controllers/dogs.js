@@ -26,7 +26,6 @@ function show(req, res) {
                 .then(function (applications) {
                     res.render('dogs/show', { title: 'Dog', dog, applications })
                 })
-
         })
         .catch(function (err) {
             console.log(err)
