@@ -33,7 +33,7 @@ function create(req, res) {
 
 
             }).then(function () {
-                console.log(req.body)
+                // console.log(req.body)
                 res.redirect(`/dogs/${req.params.id}`)
 
             })
@@ -76,5 +76,23 @@ function updateOne(req, res){
 }
 
 function deleteOne(req, res) {
+    // console.log('This is the req:', req.body)
     
+    Dog.findById(req.body.dog)
+    .then(function(dog) {
+        console.log('This is the dog:', dog)
+        Application.deleteOne({_id: req.params.id})
+        .then(function(results) {
+            console.log('These are the results:', results)
+            res.redirect(`/dogs/${dog._id}`)
+        })
+        .catch(function(err) {
+            console.log(err)
+            res.redirect(`/dogs`)
+        })
+    })
+    .catch(function(err) {
+        console.log(err)
+        res.redirect('/dogs')
+    })
 }
