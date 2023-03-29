@@ -1,30 +1,14 @@
 <%- include('../partials/header', { title }) %>
-<section>
-    <h1>all dogs here</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Breed</th>
-                <th>Age</th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            <% dogs.forEach(d => { %>
-            <tr>
-                <td><%= d.name %></td>
-                <td><%= d.breed %></td>
-                <td><%= d.age %></td>
-                <td>
-                    <a href="/dogs/<%=d._id%>">View</a>
-                </td>
-            </tr>
+    <section class="dog-prof">
+        <% dogs.forEach(d=> { %>
+        <div class="card">
+            <img class="dog-img" src="https://i.imgur.com/UMD6R9e.jpg" alt="paw">
+            <h3><%= d.name %></h3>
+            <p><%= d.breed %></p>
+            <p><%= d.age %></p>
+            <button><a href="/dogs/<%=d._id%>">View</a></button>
+            </div>
             <% }) %>
-        </tbody>
-    </table>
+    </section>
 
-</section>
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
