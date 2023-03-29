@@ -9,6 +9,8 @@ router.get('/dogs/:id/applications/new', applicationsCtrl.new)
 
 router.get('/:id', applicationsCtrl.delete)
 
+router.get('/dogs/:id/applications/:id/edit', applicationsCtrl.edit)
+router.put('/dogs/:id/appications/:id', applicationsCtrl.updateOne)
 
 
 module.exports = router
