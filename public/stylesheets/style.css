@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,6 +7,18 @@ a {
   color: #00B7FF;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightgray;
+  font-size: 16px;
+  text-decoration: none;
+}
 
 .login{
   display: flex;
@@ -17,4 +29,46 @@ a {
 
 .login > img {
   height: 20px;
+}
+
+.dog-prof {
+
+  display: grid;
+  grid-gap: 15px 15px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.card {
+  padding: 10px;
+  border: darkgrey 2px solid;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.dog-img {
+  height:80px;
+}
+
+#nav-title {
+  margin-right: 50px;
+}
+
+#title  {
+  text-align: center;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  body  {
+    margin: 0
+  }
+  .dog-prof {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat (3, 1fr);
+  }
 }
