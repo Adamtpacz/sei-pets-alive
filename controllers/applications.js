@@ -55,7 +55,7 @@ function edit(req, res){
     res.render('applications/edit',  {title: 'Edit Application', application})
 }).catch(function(err){
     console.log(err)
-    res.redirect('/dogs/')
+    res.redirect('/')
 })
 }
 
