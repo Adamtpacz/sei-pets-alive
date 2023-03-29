@@ -1,6 +1,6 @@
 <%- include('../partials/header', { title }) %>
 
-<form action="/applications/<%= application._id %>?_method=PUT" method="POST">
+<form action="/dogs/<%= application.dog %>/applications/<%= application._id %>?_method=PUT" method="POST">
     <label>Name:
         <input type="text" name="name" value="<%=application.name%>">
     </label>
@@ -8,7 +8,7 @@
         <input type="text" name="phone" value="<%=application.phone%>">
     </label>
     <label>Email:
-        <input type="text" name="email" value="<%=application.email%>">
+        <input type="text" name="emailAddress" value="<%=application.emailAddress%>">
     </label>
     <label>Address:
         <input type="text" name="address" value="<%=application.address%>">

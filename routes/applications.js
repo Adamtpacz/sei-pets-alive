@@ -7,7 +7,7 @@ router.post('/dogs/:id/applications', applicationsCtrl.create)
 router.get('/dogs/:id/applications/new', applicationsCtrl.new)
 
 router.get('/applications/:id/edit', applicationsCtrl.edit)
-router.put('/applications/:id', applicationsCtrl.updateOne)
+router.put('/dogs/:dogId/applications/:appId', applicationsCtrl.updateOne)
 
 
 module.exports = router

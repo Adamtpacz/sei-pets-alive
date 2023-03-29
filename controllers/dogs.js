@@ -1,5 +1,5 @@
 const Dog = require('../models/Dog')
-const Application= require('../models/Application')
+const Application = require('../models/Application')
 
 module.exports = {
     index,
@@ -22,7 +22,9 @@ function index(req, res) {
 function show(req, res) {
     Dog.findById(req.params.id)
         .then(function (dog) {
+            console.log(dog._id)
             Application.find({ dog: dog._id })
+
                 .then(function (applications) {
                     res.render('dogs/show', { title: 'Dog', dog, applications })
                 })
