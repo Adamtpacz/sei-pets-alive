@@ -65,7 +65,7 @@ function updateOne(req, res){
     .then(function(application){
         return application.save()
     }).then(function(application){
-    console.log(application)
+    console.log('this is the update application', application)
 
     res.redirect(`/dogs/${req.params.id}`)
     })
