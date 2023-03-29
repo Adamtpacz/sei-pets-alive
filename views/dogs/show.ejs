@@ -49,6 +49,11 @@
                     <td><%= a.emailAddress %></td>
                     <td><%= a.address %></td>
                     <td><%= a.numberOfPets %></td>
+                    <td>
+                    <form action="/applications/<%=applications._id%>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                    </td>
                 </tr>
                 <% }); %>
         </tbody>
