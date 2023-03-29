@@ -28,6 +28,8 @@
 </section>
 <a class="btn-detail" href="/dogs/<%=dog._id%>/applications/new" >Apply to Adopt</a>
 
+
+
 <section class="applications">
     <h2>Applications</h2>
     <% if (applications.length){ %>
@@ -39,6 +41,7 @@
                 <th>Email</th>
                 <th>Address</th>
                 <th>Number of Pets Owned</th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
@@ -49,14 +52,26 @@
                     <td><%= a.emailAddress %></td>
                     <td><%= a.address %></td>
                     <td><%= a.numberOfPets %></td>
+                    <td>
+                    <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
+                        <input type="hidden" value="<%= dog._id %>" name="dog">
+                        <button type="submit">Delete</button>
+                    </form>
+                    </td>
+                   <td> <a class="btn-detail" href="/applications/<%=a._id%>/edit" >Edit application</a></td>
                 </tr>
                 <% }); %>
         </tbody>
+
     </table>
+
     <% } else { %>
         <h5>No Applications Yet</h5>
         <% } %>
 </section>
+
+    </table>
+
 
 
 <%- include('../partials/footer') %>
