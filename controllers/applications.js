@@ -51,20 +51,21 @@ function create(req, res) {
 
 function edit(req, res) {
     Application.findById(req.params.id)
-        .then(function (application) {
-            res.render('applications/edit', { title: 'Edit Application', application })
-        }).catch(function (err) {
-            console.log(err)
-            res.redirect('/')
-        })
+    .then(function(application){
+        console.log('this is the application', application)
+    res.render('applications/edit',  {title: 'Edit Application', application})
+}).catch(function(err){
+    console.log(err)
+    res.redirect('/')
+})
 }
 
-function updateOne(req, res) {
-    Application.findByIdAndUpdate({ _id: req.params.id }, req.body)
-        .then(function (Application) {
-            return application.save()
-        }).then(function (applicatino) {
-            console.log(application)
+function updateOne(req, res){
+    Application.findByIdAndUpdate({_id:req.params.id}, req.body)
+    .then(function(application){
+        return application.save()
+    }).then(function(application){
+    console.log(application)
 
             res.redirect(`/dogs/${req.params.id}`)
         })
