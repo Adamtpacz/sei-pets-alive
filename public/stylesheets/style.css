@@ -136,7 +136,6 @@ input:focus {
 .applications {
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
 }
 
 
@@ -218,6 +217,9 @@ input:focus {
   align-items: center;
 }
 
+#app-title {
+  margin: 40px;
+}
 
 
 @media only screen and (max-width: 480px) {
