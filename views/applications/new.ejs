@@ -1,9 +1,9 @@
 <%- include('../partials/header', { title }) %>
 
-    <h1 id="title">
-        <%= title %>
-    </h1>
 
+<h1 id="title">
+    <%= title %>
+</h1>
     <form class="new-form" action="/dogs/<%=dog._id%>/applications" method="POST">
         <label>Dog:
             <select name="dog">
