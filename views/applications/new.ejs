@@ -1,28 +1,40 @@
 <%- include('../partials/header', { title }) %>
 
-<form action="/dogs/<%=dog._id%>/applications" method="POST">
-    <label>Name:
-        <input type="text" name="name">
-    </label>
-    <label>Phone:
-        <input type="text" name="phone">
-    </label>
-    <label>Email:
-        <input type="text" name="emailAddress">
-    </label>
-    <label>Address:
-        <input type="text" name="address">
-        <br>
-    </label>
-    <label>Number of Pets
-        <input type="text" name="numberOfPets">
-    </label>
-    <button type="submit">Submit Application</button>
-    <label>Dog
-    <select name="dog">
-        <option value="<%=dog._id %>">"<%=dog.name %>"</option>
-    </select>
-</label>
-</form>
+    <h1 id="title">
+        <%= title %>
+    </h1>
 
-<%- include('../partials/footer') %>
+    <form class="new-form" action="/dogs/<%=dog._id%>/applications" method="POST">
+        <label>Dog:
+            <select name="dog">
+                <option value="<%=dog._id %>">
+                    <%=dog.name %>
+                </option>
+            </select>
+        </label>
+
+        <label>Name:
+            <input type="text" name="name">
+        </label>
+
+        <label>Phone:
+            <input type="text" name="phone">
+        </label>
+
+        <label>Email:
+            <input type="text" name="emailAddress">
+        </label>
+
+        <label>Address:
+            <input type="text" name="address">
+        </label>
+
+        <label>Number of Pets:
+            <input type="text" name="numberOfPets">
+        </label>
+
+        <button class="form-app-btn" type="submit">Submit Application</button>
+
+    </form>
+
+    <%- include('../partials/footer') %>
