@@ -113,6 +113,17 @@ button:focus {
   font-size: 16px;
 }
 
+.app-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-user img {
+  border-radius: 50%;
+  height: 50px;
+}
+
 #nav-title {
   margin-right: 50px;
 }

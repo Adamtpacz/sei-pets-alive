@@ -22,23 +22,28 @@
     <section class="applications">
         <h2>Applications</h2>
         <% if (applications.length){ %>
+            <%applications.forEach(function(a) { %>
             <table>
                 <thead>
                     <tr>
+                        <th></th>
+                        <% if (user?._id.equals(a.user)) { %>
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Email</th>
                         <th>Address</th>
                         <th>Number of Pets Owned</th>
+                        <% } %>
                         <th> </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <%applications.forEach(function(a) { %>
                         <tr>
+                            <td class="app-user"><img alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer"/></td>
                             <td>
-                                <%= a.name %>
+                                <%= a.userName %>
                             </td>
+                            <% if (user?._id.equals(a.user)) { %>
                             <td>
                                 <%= a.phone %>
                             </td>
@@ -51,7 +56,6 @@
                             <td>
                                 <%= a.numberOfPets %>
                             </td>
-                            <% if (user?._id.equals(a.user)) { %>
                             <td>
                                 <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
                                     <input type="hidden" value="<%= dog._id %>" name="dog">
