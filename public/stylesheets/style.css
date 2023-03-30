@@ -120,11 +120,17 @@ form >input {
 }
 
 .applications {
-  width: 600px;
+  /* margin: 0;
+  display: grid;
+  grid-gap: 50px 30px;
+  grid-template-columns: repeat(3, 210px);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: center; */
   display: flex;
-  justify-content: space-between;
-
+  justify-content: space-around;
+  margin-top: 30px;
 }
+
 
 .user {
   border: 2px solid #d5d9d9;
@@ -173,15 +179,11 @@ input:focus {
   border: 1px solid darkgray;
 }
 
-.app-user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .app-user {
   border-radius: 50%;
   height: 50px;
+  margin: 0 80px;
 }
 
 #nav-title {
@@ -207,6 +209,21 @@ input:focus {
 #new-app-btn {
   width: 150px;
   font-size: 18px;
+}
+#btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-name {
+  text-align: center;
+}
+
+.app-btn, .app-btn > button {
+  margin: 5px 10px;
+  font-size: 14px;
+  width: 100px;
 }
 
 

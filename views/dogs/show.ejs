@@ -28,10 +28,10 @@
     <section class="applications">
         <% if (applications.length){ %>
             <%applications.forEach(function(a) { %>
-                <div >
+                <div class="user-card">
                     <img class="app-user" alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer" />
     
-                    <h3><%= a.userName %></h3>
+                    <h3 class="user-name"><%= a.userName %></h3>
     
                     <% if (user?._id.equals(a.user)) { %>
                         <div class="user">
@@ -46,13 +46,13 @@
         
                             <h4>Number of Pets Owned:</h4>
                             <p><%= a.numberOfPets %> pets</p>
-                            <div>
-                                <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
+                            <div id="btns">
+                                <form  action="/applications/<%=a._id%>?_method=DELETE" method="POST">
                                     <input type="hidden" value="<%= dog._id %>" name="dog">
-                                    <button class="app-btn" type="submit">Delete</button>
+                                    <button  class="app-btn"type="submit">Delete</button>
                                 </form>
             
-                                <button><a class="app-btn" href="/applications/<%=a._id%>/edit">Edit</a></button>
+                                <button class="app-btn"><a href="/applications/<%=a._id%>/edit">Edit</a></button>
                             </div>
                         </div>
                         <% } %>
