@@ -1,77 +1,76 @@
 <%- include('../partials/header', { title }) %>
 
-<section>
-    <div>Name:</div>
-    <div>
-        <%= dog.name %>
-    </div>
-    <div>Gender:</div>
-    <div>
-        <%= dog.gender %>
-    </div>
-    <div>Breed:</div>
-    <div>
-        <%= dog.breed %>
-    </div>
-    <div>Weight:</div>
-    <div>
-        <%= dog.weight %>
-    </div>
-    <div>Age:</div>
-    <div>
-        <%= dog.age %>
-    </div>
-    <div>Adoption Fee:</div>
-    <div>
-        <%= dog.adoptionFee %>
-    </div>
-</section>
-<a class="btn-detail" href="/dogs/<%=dog._id%>/applications/new" >Apply to Adopt</a>
+<h1 id="title">About <%= dog.name %></h1>
+    <main class="main-container">
+        <section class="main-1">
+            <img class="dog-img" src="/images/<%=dog.name%>.png" alt="dog-image">
+        </section>
+        <section class="main-2">
+            <div>
+                <p>Gender: <%= dog.gender %></p>
+                <p>Breed: <%= dog.breed %></p>
+                <p>Weight: <%= dog.weight %>lbs</p>
+                <p>Age: <%= dog.age %></p>
+                <p>Adoption Fee: $<%= dog.adoptionFee %></p>
+            </div>
+            <button id="new-app-btn"><a href="/dogs/<%=dog._id%>/applications/new">Apply to Adopt!</a></button>
+        </section>
+    </main>
 
 
 
-<section class="applications">
-    <h2>Applications</h2>
-    <% if (applications.length){ %>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-                <th>Number of Pets Owned</th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            <%applications.forEach(function(a) { %>
-                <tr>
-                    <td><%= a.name %></td>
-                    <td><%= a.phone %></td>
-                    <td><%= a.emailAddress %></td>
-                    <td><%= a.address %></td>
-                    <td><%= a.numberOfPets %></td>
-                    <td>
-                    <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
-                        <input type="hidden" value="<%= dog._id %>" name="dog">
-                        <button type="submit">Delete</button>
-                    </form>
-                    </td>
-                   <td> <a class="btn-detail" href="/applications/<%=a._id%>/edit" >Edit application</a></td>
-                </tr>
-                <% }); %>
-        </tbody>
+    <section class="applications">
+        <h2>Applications</h2>
+        <% if (applications.length){ %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Number of Pets Owned</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%applications.forEach(function(a) { %>
+                        <tr>
+                            <td>
+                                <%= a.name %>
+                            </td>
+                            <td>
+                                <%= a.phone %>
+                            </td>
+                            <td>
+                                <%= a.emailAddress %>
+                            </td>
+                            <td>
+                                <%= a.address %>
+                            </td>
+                            <td>
+                                <%= a.numberOfPets %>
+                            </td>
+                            <td>
+                                <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
+                                    <input type="hidden" value="<%= dog._id %>" name="dog">
+                                    <button type="submit">Delete</button>
+                                </form>
+                            </td>
+                            <td> <a class="btn-detail" href="/applications/<%=a._id%>/edit">Edit application</a></td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+
+            </table>
+
+            <% } else { %>
+                <h5>No Applications Yet</h5>
+                <% } %>
+    </section>
 
     </table>
 
-    <% } else { %>
-        <h5>No Applications Yet</h5>
-        <% } %>
-</section>
-
-    </table>
 
 
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

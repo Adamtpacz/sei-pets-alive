@@ -1,12 +1,13 @@
 <%- include('../partials/header', { title }) %>
+<h1 id="title"><%= title %></h1>
     <section class="dog-prof">
         <% dogs.forEach(d=> { %>
         <div class="card">
-            <img class="dog-img" src="https://i.imgur.com/UMD6R9e.jpg" alt="paw">
+            <img class="dog-img" src="/images/<%=d.name%>.png" alt="dog-image">
             <h3><%= d.name %></h3>
             <p><%= d.breed %></p>
             <p><%= d.age %></p>
-            <button><a href="/dogs/<%=d._id%>">View</a></button>
+            <button id="view-btn"><a href="/dogs/<%=d._id%>">View Details</a></button>
             </div>
             <% }) %>
     </section>
