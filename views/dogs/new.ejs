@@ -1,0 +1,29 @@
+<%- include('../partials/header', { title }) %>
+
+<form action="" method="POST">
+    <label>Name:
+        <input type="text" name="name">
+    </label>
+    <label>Gender:
+        <select name="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+        </select>
+    </label>
+    <label>Breed:
+        <input type="text" name="breed">
+    </label>
+    <label>Current Weight:
+        <input type="number" name="weight">
+    </label>
+    <label>Age:
+        <input type="text" name="age">
+    </label>
+    <label>Adoption Fee:
+        <input type="number" name="adoptionFee">
+        <br>
+    </label>
+    <button type="submit">Submit Application</button>
+</form>
+
+<%- include('../partials/footer') %>
