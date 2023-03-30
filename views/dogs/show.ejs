@@ -51,6 +51,7 @@
                             <td>
                                 <%= a.numberOfPets %>
                             </td>
+                            <% if (user?._id.equals(a.user)) { %>
                             <td>
                                 <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
                                     <input type="hidden" value="<%= dog._id %>" name="dog">
@@ -58,6 +59,7 @@
                                 </form>
                             </td>
                             <td> <a class="btn-detail" href="/applications/<%=a._id%>/edit">Edit application</a></td>
+                            <% } %>
                         </tr>
                         <% }); %>
                 </tbody>

@@ -29,9 +29,10 @@ function create(req, res) {
                 numberOfPets: req.body.numberOfPets,
                 address: req.body.address,
                 message: req.body.message,
-                dog: dog._id
-
-
+                dog: dog._id,
+                user: req.user._id,
+                userName: req.user.name,
+                userAvatar: req.user.avatar
             }).then(function () {
                 // console.log(req.body)
                 res.redirect(`/dogs/${req.params.id}`)
