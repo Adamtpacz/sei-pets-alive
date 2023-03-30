@@ -41,8 +41,22 @@ button:focus {
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
 }
 
-form >input {
-  border: 2px solid rgb(140, 49, 49);
+label {
+  font-size: 18px;
+}
+
+input,
+select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid darkgray;
+}
+
+input:focus {
+  outline: 0;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .content {
@@ -133,7 +147,8 @@ form >input {
   padding: 10px;
 }
 
-.new-form, .edit-form {
+.new-form,
+.edit-form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -148,24 +163,6 @@ form >input {
 
 }
 
-label {
-  font-size: 18px;
-}
-
-input, select {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid darkgray;
-}
-
-input:focus {
-  outline: 0;
-  border: 1px solid rgb(0, 0, 0);
-}
-
-
 .form-app-btn {
   width: auto;
   margin: 0 80px;
@@ -173,11 +170,21 @@ input:focus {
   border: 1px solid darkgray;
 }
 
-
 .app-user {
   border-radius: 50%;
   height: 50px;
   margin: 0 80px;
+}
+
+.user-name {
+  text-align: center;
+}
+
+.app-btn,
+.app-btn>button {
+  margin: 5px 10px;
+  font-size: 14px;
+  width: 100px;
 }
 
 #nav-title {
@@ -204,21 +211,13 @@ input:focus {
   width: 150px;
   font-size: 18px;
 }
+
 #btns {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.user-name {
-  text-align: center;
-}
-
-.app-btn, .app-btn > button {
-  margin: 5px 10px;
-  font-size: 14px;
-  width: 100px;
-}
 
 
 @media only screen and (max-width: 480px) {
@@ -232,14 +231,16 @@ input:focus {
     grid-template-rows: repeat (3, 1fr);
   }
 
-  .main-container, .new-form { 
+  .main-container,
+  .new-form {
     max-width: 250px;
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 20px;
   }
-  
-  input, select {
+
+  input,
+  select {
     width: 100%;
   }
 
