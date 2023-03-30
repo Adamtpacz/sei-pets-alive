@@ -1,81 +1,68 @@
 <%- include('../partials/header', { title }) %>
 
-<h1 id="title">About <%= dog.name %></h1>
+    <h1 id="title">About <%= dog.name %>
+    </h1>
     <main class="main-container">
         <section class="main-1">
             <img class="dog-img" src="/images/<%=dog.name%>.png" alt="dog-image">
         </section>
         <section class="main-2">
             <div>
-                <p>Gender: <%= dog.gender %></p>
-                <p>Breed: <%= dog.breed %></p>
+                <p>Gender: <%= dog.gender %>
+                </p>
+                <p>Breed: <%= dog.breed %>
+                </p>
                 <p>Weight: <%= dog.weight %>lbs</p>
-                <p>Age: <%= dog.age %></p>
-                <p>Adoption Fee: $<%= dog.adoptionFee %></p>
+                <p>Age: <%= dog.age %>
+                </p>
+                <p>Adoption Fee: $<%= dog.adoptionFee %>
+                </p>
             </div>
             <button id="new-app-btn"><a href="/dogs/<%=dog._id%>/applications/new">Apply to Adopt!</a></button>
         </section>
     </main>
 
 
+    <h2>Applications</h2>
 
     <section class="applications">
-        <h2>Applications</h2>
         <% if (applications.length){ %>
             <%applications.forEach(function(a) { %>
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <% if (user?._id.equals(a.user)) { %>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Address</th>
-                        <th>Number of Pets Owned</th>
-                        <% } %>
-                        <th> </th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <tr>
-                            <td class="app-user"><img alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer"/></td>
-                            <td>
-                                <%= a.userName %>
-                            </td>
-                            <% if (user?._id.equals(a.user)) { %>
-                            <td>
-                                <%= a.phone %>
-                            </td>
-                            <td>
-                                <%= a.emailAddress %>
-                            </td>
-                            <td>
-                                <%= a.address %>
-                            </td>
-                            <td>
-                                <%= a.numberOfPets %>
-                            </td>
-                            <td>
+                <div >
+                    <img class="app-user" alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer" />
+    
+                    <h3><%= a.userName %></h3>
+    
+                    <% if (user?._id.equals(a.user)) { %>
+                        <div class="user">
+                            <h4>Phone:</h4>
+                            <p><%= a.phone %></p>
+        
+                            <h4>Email:</h4>
+                            <p><%= a.emailAddress %></p>
+        
+                            <h4>Address:</h4>
+                            <p><%= a.address %></p>
+        
+                            <h4>Number of Pets Owned:</h4>
+                            <p><%= a.numberOfPets %> pets</p>
+                            <div>
                                 <form action="/applications/<%=a._id%>?_method=DELETE" method="POST">
                                     <input type="hidden" value="<%= dog._id %>" name="dog">
-                                    <button type="submit">Delete</button>
+                                    <button class="app-btn" type="submit">Delete</button>
                                 </form>
-                            </td>
-                            <td> <a class="btn-detail" href="/applications/<%=a._id%>/edit">Edit application</a></td>
-                            <% } %>
-                        </tr>
+            
+                                <button><a class="app-btn" href="/applications/<%=a._id%>/edit">Edit</a></button>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
                         <% }); %>
-                </tbody>
-
-            </table>
-
-            <% } else { %>
-                <h5>No Applications Yet</h5>
-                <% } %>
+                            <% } else { %>
+                                <h5>No Applications Yet</h5>
+                                <% } %>
     </section>
 
-    </table>
 
 
 
