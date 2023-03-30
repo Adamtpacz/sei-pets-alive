@@ -120,12 +120,6 @@ form >input {
 }
 
 .applications {
-  /* margin: 0;
-  display: grid;
-  grid-gap: 50px 30px;
-  grid-template-columns: repeat(3, 210px);
-  grid-template-rows: repeat(2, 300px);
-  justify-content: center; */
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
