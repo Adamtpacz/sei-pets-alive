@@ -19,10 +19,14 @@ const applicationSchema = new mongoose.Schema({
         required: true
     },
     message: String,
-
-    dog:{type: mongoose.Schema.Types.ObjectId, ref: 'Dog'}
-
-
+    dog:{type: mongoose.Schema.Types.ObjectId, ref: 'Dog'},
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    userName: String,
+    userAvatar: String
 }, {timestamps: true})
 
 module.exports = mongoose.model('Application', applicationSchema)
