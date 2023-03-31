@@ -16,6 +16,8 @@ a:link {
   font-family: 'Londrina Solid', cursive;
 }
 
+
+
 nav {
   padding: 5px 25px;
   display: flex;
@@ -95,7 +97,7 @@ input:focus {
   grid-template-rows: repeat(2, 300px);
   justify-content: center;
   align-items: center;
-  
+
 
 }
 
