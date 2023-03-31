@@ -1,10 +1,11 @@
 body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
 }
 
 a:link {
@@ -12,18 +13,19 @@ a:link {
 }
 
 nav {
-  padding: 0 25px;
+  padding: 5px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgray;
+  background-color: #E9B796;
   font-size: 16px;
   text-decoration: none;
+  color: #962E2A;
 }
 
 button {
-  background-color: #fff;
-  border: 1px solid #d5d9d9;
+  background-color: #962E2A;
+  border: 1px solid #E9B796;
   border-radius: 8px;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   cursor: pointer;
@@ -31,10 +33,11 @@ button {
   padding: 8px 10px;
   text-align: center;
   width: 100px;
+  color: white;
 }
 
 button:hover {
-  background-color: #f7fafa;
+  background-color: #a64340;
 }
 
 button:focus {
@@ -77,43 +80,46 @@ input:focus {
 }
 
 .dog-prof {
-  margin: 0;
+  margin: 0 0 80px 0;
   display: grid;
   grid-gap: 50px 30px;
   grid-template-columns: repeat(3, 200px);
   grid-template-rows: repeat(2, 300px);
   justify-content: center;
   align-items: center;
+  
 
 }
 
 .card {
-  background-color: white;
   padding: 20px;
-  border: darkgrey 2px solid;
+  /* background-color: #E9B796; */
+  background-color: #e2f1f9;
   text-align: center;
   align-items: center;
-  border: 2px solid #d5d9d9;
   border-radius: 10px;
-  box-shadow: rgba(213, 217, 217, .5) 0 5px 8px 0;
+  box-shadow: #E3867D 0 3px 5px 0;
+  color: #d26e65;
+
 }
 
 .dog-img {
   height: 140px;
   border-radius: 10px;
+  /* border: 2px #E3867D solid; */
 }
 
 .main-container {
   width: 550px;
+  background-color: #e2f1f9;
   display: grid;
   grid-template-columns: 300px 250px;
   justify-content: center;
   margin: 0 50px;
   align-items: center;
   padding: 40px;
-  border: 2px solid #d5d9d9;
   border-radius: 10px;
-  box-shadow: rgba(213, 217, 217, .5) 0 5px 8px 0;
+  box-shadow: #E3867D 0 3px 5px 0;
 }
 
 .main-1 {
@@ -131,6 +137,7 @@ input:focus {
 
 .main-2 {
   font-size: 16px;
+  color: #d26e65
 }
 
 .applications {
@@ -144,6 +151,7 @@ input:focus {
   border-radius: 10px;
   box-shadow: rgba(213, 217, 217, .5) 0 5px 8px 0;
   padding: 10px;
+  background-color: #e2f1f9;
 }
 
 .new-form,
@@ -158,7 +166,7 @@ input:focus {
   border-radius: 5px;
   border: solid 1px #ccc;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, .31);
-  background: #ebebeb;
+  background-color: #e2f1f9;
 
 }
 
@@ -172,8 +180,8 @@ input:focus {
   margin: 30px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+
 }
 .app-user {
   border-radius: 50%;
@@ -182,6 +190,7 @@ input:focus {
 
 .user-name {
   text-align: center;
+  color: #962E2A;
 }
 
 .app-btn,
@@ -189,10 +198,12 @@ input:focus {
   margin: 5px 10px;
   font-size: 14px;
   width: 100px;
+  color: white;
 }
 
 #nav-title {
   margin-right: 50px;
+  font-size: 30px;
 }
 
 #nav-links {
@@ -206,9 +217,14 @@ input:focus {
   padding-left: 20px;
 }
 
+#nav-links > a:hover {
+  color: #d26e65;
+}
+
 #title {
   text-align: center;
   padding: 30px;
+  color: #962E2A;
 }
 
 #new-app-btn {
@@ -220,10 +236,12 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 #app-title {
   margin: 40px;
+  color: #962E2A;
 }
 
 
@@ -240,7 +258,7 @@ input:focus {
 
   .main-container,
   .new-form {
-    max-width: 250px;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 20px;
@@ -262,9 +280,19 @@ input:focus {
     text-align: center;
     padding: 10px;
   }
-
-  .applicants {
+  .main-2 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .applications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-form, .edit-form {
+    width: auto;
+    margin: 10px;
   }
 }
