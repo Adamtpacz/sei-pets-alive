@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 a {
@@ -10,6 +11,8 @@ a {
 a:link {
   text-decoration: none;
 }
+
+
 
 nav {
   padding: 0 25px;
