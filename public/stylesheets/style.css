@@ -168,11 +168,16 @@ input:focus {
   font-size: 18px;
   border: 1px solid darkgray;
 }
-
+.user-card {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
 .app-user {
   border-radius: 50%;
   height: 50px;
-  margin: 0 80px;
 }
 
 .user-name {
