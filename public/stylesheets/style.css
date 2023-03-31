@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@300;400&family=Rampart+One&display=swap');
 body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,10 +7,13 @@ body {
 
 a {
   color: white;
+  /* font-family: 'Rampart One', cursive; */
+  /* font-family: 'Londrina Outline', cursive; */
 }
 
 a:link {
   text-decoration: none;
+  font-family: 'Londrina Solid', cursive;
 }
 
 nav {
@@ -34,6 +38,7 @@ button {
   text-align: center;
   width: 100px;
   color: white;
+  font-family: 'Londrina Solid', cursive;
 }
 
 button:hover {
@@ -46,6 +51,7 @@ button:focus {
 
 label {
   font-size: 18px;
+  color: #175789;
 }
 
 input,
@@ -66,6 +72,8 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 300;
 }
 
 .login {
@@ -137,12 +145,13 @@ input:focus {
 
 .main-2 {
   font-size: 16px;
-  color: #d26e65
+  color: #d26e65;
 }
 
 .applications {
   display: flex;
   justify-content: space-around;
+  font-weight: 300;
 }
 
 
@@ -152,6 +161,8 @@ input:focus {
   box-shadow: rgba(213, 217, 217, .5) 0 5px 8px 0;
   padding: 10px;
   background-color: #e2f1f9;
+  color:#175789;
+  font-size: 16px;
 }
 
 .new-form,
@@ -177,11 +188,11 @@ input:focus {
   border: 1px solid darkgray;
 }
 .user-card {
-  margin: 30px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 200px;
 }
 .app-user {
   border-radius: 50%;
@@ -191,6 +202,7 @@ input:focus {
 .user-name {
   text-align: center;
   color: #962E2A;
+  font-weight: 300;
 }
 
 .app-btn,
@@ -202,8 +214,10 @@ input:focus {
 }
 
 .app-title {
-  margin: 40px;
+  margin-top: 60px;
+  margin-bottom: 0;
   color: #962E2A;
+  font-weight: 300;
 }
 
 #nav-title {
@@ -211,7 +225,7 @@ input:focus {
   display: flex;
   align-items: flex-end;
   font-size: 25px;
-
+  font-family: 'Rampart One', cursive;
 }
 #nav-title > h1 {
   margin: 0;
@@ -232,6 +246,7 @@ input:focus {
 #nav-links>a {
   padding-left: 20px;
   font-size: 18px;
+  font-size: 25px;
 }
 
 #nav-links > a:hover {
@@ -242,6 +257,9 @@ input:focus {
   text-align: center;
   padding: 30px;
   color: #962E2A;
+  /* font-family: 'Rampart One', cursive; */
+  font-family: 'Londrina Solid', cursive;
+  font-size: 40px;
 }
 
 #new-app-btn {
@@ -280,6 +298,7 @@ input:focus {
   input,
   select {
     width: 100%;
+    font-family: 'Londrina Solid', cursive;
   }
 
   .form-app-btn {
