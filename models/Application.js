@@ -7,7 +7,7 @@ const applicationSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        match: /\d{3}-\d{3}-\d{4}/
+        match: /\d{10}/
     },
     emailAddress: {
         type: String,
