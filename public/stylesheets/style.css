@@ -202,8 +202,19 @@ input:focus {
 }
 
 #nav-title {
-  margin-right: 50px;
-  font-size: 30px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 25px;
+  margin-bottom: 10px;
+
+}
+#nav-title > h1 {
+  margin: 0;
+}
+
+#nav-title > img {
+  height:80px;
+  margin-right: 10px;
 }
 
 #nav-links {
@@ -215,6 +226,7 @@ input:focus {
 
 #nav-links>a {
   padding-left: 20px;
+  font-size: 18px;
 }
 
 #nav-links > a:hover {
