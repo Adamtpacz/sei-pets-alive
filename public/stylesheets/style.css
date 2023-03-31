@@ -201,11 +201,16 @@ input:focus {
   color: white;
 }
 
+.app-title {
+  margin: 40px;
+  color: #962E2A;
+}
+
 #nav-title {
+  margin: 15px 0;
   display: flex;
   align-items: flex-end;
   font-size: 25px;
-  margin-bottom: 10px;
 
 }
 #nav-title > h1 {
@@ -213,7 +218,7 @@ input:focus {
 }
 
 #nav-title > img {
-  height:80px;
+  height:50px;
   margin-right: 10px;
 }
 
@@ -251,10 +256,6 @@ input:focus {
 
 }
 
-#app-title {
-  margin: 40px;
-  color: #962E2A;
-}
 
 
 @media only screen and (max-width: 480px) {
@@ -306,5 +307,9 @@ input:focus {
   .new-form, .edit-form {
     width: auto;
     margin: 10px;
+  }
+
+  nav, #nav-title {
+    width: auto;
   }
 }
