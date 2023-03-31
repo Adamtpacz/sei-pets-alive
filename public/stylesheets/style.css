@@ -262,4 +262,9 @@ input:focus {
     text-align: center;
     padding: 10px;
   }
+
+  .applicants {
+    display: flex;
+    flex-direction: column;
+  }
 }
