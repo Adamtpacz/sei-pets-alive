@@ -40,10 +40,10 @@
 - Google OAuth
 
 ## Getting Started:
-Include a link to the deployed app
+[SEI Pets Alive Deployed via Heroku](https://sei-pets-alive.herokuapp.com/)
 
 ## Planning Details:
-https://trello.com/b/qbaMEOsp/sei-pets-alive
+[SEI Pets Alive Trello Board](https://trello.com/b/qbaMEOsp/sei-pets-alive)
 
 
 ## Future Enhancements:
