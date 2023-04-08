@@ -34,15 +34,12 @@ function create(req, res) {
                 userName: req.user.name,
                 userAvatar: req.user.avatar
             }).then(function () {
-                // console.log(req.body)
                 res.redirect(`/dogs/${req.params.id}`)
-
             })
                 .catch(function (err) {
                     console.log(err)
                     res.redirect(`/dogs/${req.params.id}`)
                 })
-
         }).catch(function (err) {
             console.log(err)
             res.redirect(`/dogs/${req.params.id}`)
@@ -65,9 +62,7 @@ function updateOne(req, res) {
     Application.findByIdAndUpdate(req.params.appId , req.body, { new: true })
         .then(function (application) {
             console.log('this is the updated application', application)
-
             res.redirect(`/dogs/${req.params.dogId}`)
-
 
         }).catch(function (err) {
             console.log(err)

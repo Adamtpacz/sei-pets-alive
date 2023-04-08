@@ -4,8 +4,6 @@ const Application = require('../models/Application')
 module.exports = {
     index,
     show,
-
-
 }
 
 function index(req, res) {
